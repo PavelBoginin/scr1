@@ -5,9 +5,9 @@ class ialu_item extends uvm_sequence_item;
 
 	`uvm_object_utils(ialu_item)
 
-	rand bit signed [`SCR1_XLEN-1:0]      op1;
-	rand bit signed [`SCR1_XLEN-1:0]      op2;
-	rand bit signed [`SCR1_XLEN-1:0]      res;
+	rand bit [`SCR1_XLEN-1:0]      op1;
+	rand bit [`SCR1_XLEN-1:0]      op2;
+	rand bit [`SCR1_XLEN-1:0]      res;
 	rand type_scr1_ialu_cmd_sel_ee        cmd;
 
 	constraint c_cmd { cmd inside {SCR1_IALU_CMD_ADD, SCR1_IALU_CMD_SUB}; }
