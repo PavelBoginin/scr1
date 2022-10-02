@@ -33,7 +33,7 @@ task ialu_driver::drive();
 		@(posedge vif.clk) begin
 			vif.op1 <= req.op1;
 			vif.op2 <= req.op2;
-			vif.cmd <= (req.cmd);
+			vif.cmd <= req.cmd;
 		end
 		seq_item_port.item_done();
 	end

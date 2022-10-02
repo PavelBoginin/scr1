@@ -37,7 +37,7 @@ task ialu_monitor::collect();
 			txn.op1 = vif.op1;
 			txn.op2 = vif.op2;
 			txn.res = vif.res;
-			txn.cmd = (vif.cmd);
+			txn.cmd = vif.cmd;
 			ap.write(txn);
 		end
 	end
